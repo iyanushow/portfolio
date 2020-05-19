@@ -10,11 +10,26 @@ html{
     height: 100%;
     margin: 0;
 }
+ 
+body { 
+    background: #252627 url("banner.jpg")  center ;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    background-size: cover;
+    position: relative;
+    height: 1200px;
+  }
 .navbar{
     padding: 0 100px 0 100px;
     box-shadow: 0 5px 10px #29343f;
-    
     background-color: #181818;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
 }
 .logo{
     font-size:16px;
@@ -48,7 +63,7 @@ nav ul,nav{
      font-size: 22px;
      text-align: center;
      position: absolute;
-    top: 55%;
+    top: 29%;
     left: 10%; 
      color: white;
 
@@ -82,27 +97,57 @@ nav ul,nav{
     text-shadow: 0 2px 5px crimson;
 }
 
-  
-  body { 
-    background: #252627 url("banner.jpg")  center ;
-    height: 100%;
-    margin: 0;
-    background-size: cover;
-    position: relative;
-  }
+ 
   
   .hero-text {
     text-align: left;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 25%;
     transform: translate(-50%, -50%);
     color: white;
+    display: inline-block;
   }
  .myformtag
  {  color: whitesmoke;
      text-shadow: 0,2px,4px crimson;
      font-size: 10vm;
+     position: relative;
+     top: 10%;
  }
-  
- 
+  main{
+
+    height: 950px;
+  }
+.contact-section{
+    display: inline-flex;
+    position: absolute;
+    bottom: 50px;
+    margin: 0 25%;
+      
+
+}
+.contact-line{
+    font-size: 1em;
+    color:#707070;
+    text-align: center;
+    margin: 5px;
+    border: 2px solid #252627;
+
+}
+.link {
+
+    text-align: center;
+    
+}
+.link a{
+
+    color: #e0c5c5;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    color: #707070;
+    text-align: center; 
+}
