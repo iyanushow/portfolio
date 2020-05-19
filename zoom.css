@@ -14,7 +14,7 @@ html{
 body { 
     background: #252627 url("banner.jpg")  center ;
     background-repeat: no-repeat;
-    height: 100%;
+   
     margin: 0;
     background-size: cover;
     position: relative;
@@ -89,6 +89,7 @@ nav ul,nav{
 .name-span
     {
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
      
     }
 
@@ -146,8 +147,15 @@ nav ul,nav{
 }
 footer{
     position: absolute;
-    bottom: 0;
-    left: 25%;
+    bottom: 20px;
+    left: 30%;
     color: #707070;
     text-align: center; 
+}
+
+.rule
+{
+    position: relative;
+    top:9%;
+    
 }
