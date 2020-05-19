@@ -1,7 +1,7 @@
     *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 
 }
 
@@ -15,31 +15,17 @@ html{
     box-shadow: 0 5px 10px #29343f;
     
     background-color: #181818;
-    
 }
-
 .logo{
-    font-family: cursive
-    
     font-size:16px;
 }
-nav ul,.main-info-section,nav{ 
+nav ul,nav{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     list-style-type: none;
-    
     justify-content: space-between;
    
- }
-.main-info-section{
-
-    text-align: center;
-}
-body{
-    background: #252627;
-    height: 100%;
-    margin: 0;
  }
  header{
      display: flex;
@@ -55,7 +41,6 @@ body{
      color:#707070;
  }
  li{
-   
      margin-left: 30px;
  }
  .work {
@@ -86,27 +71,22 @@ body{
      font-size: 20px;
  }
  
- .name,.name-span
+.name-span
     {
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      
     }
-.text
-{
-    width: 100%;
 
-}
 .my-name
 {
     text-shadow: 0 2px 5px crimson;
 }
 
   
-  .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner.jpg");
+  body { 
+    background: #252627 url("banner.jpg")  center ;
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin: 0;
     background-size: cover;
     position: relative;
   }
@@ -119,7 +99,10 @@ body{
     transform: translate(-50%, -50%);
     color: white;
   }
-  
-  
+ .myformtag
+ {  color: whitesmoke;
+     text-shadow: 0,2px,4px crimson;
+     font-size: 10vm;
+ }
   
  

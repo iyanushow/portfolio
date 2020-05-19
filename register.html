@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zoom.css">    
+    <title>Register</title>
+</head>
+<body>
+    <div class="container navbar">
+        <header>
+            <div class="logo">
+                <h1><a href="./index.html">SHOW</a></h1>
+            </div>
+            <nav>
+                <ul>
+                <li><a href="./info.html">About me</a></li>
+                
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="">Contact info</a></li>
+                <li><a href="./register.html"> Register </a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="myformtag">
+        <h2>Register</h2>
+        <form action="http://wikipedia.org  " method="GET">  
+            
+            <div class="name-part">
+                <label for="first-name">First Name</label>
+                <input type="text" name="name" id="first-name" required placeholder=" name">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required placeholder="surname">
+            </div> <br>
+            <div class="other-info">
+                <label for="male">male</label>
+                <input type="radio" name="sex" id="male" value="male">
+                <label for="male">female</label>
+                <input type="radio" name="sex" id="female" value="female">
+                <label for="male">other</label>
+                <input type="radio" name="sex" id="other" value="other">
+            </div> <br>
+            <div class="mail-info">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="e-mail">
+                
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required placeholder="password"  minlength="5" maxlength="10">
+            </div> <br>
+            <div class="dob">
+                <label for="dob">D.O.B</label>
+                <select name="month" id="" placeholder="name">
+                    <option>jan</option>
+                    <option>feb</option>
+                    <option>march</option>
+                </select>
+                <select name="day" id="">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <select name="year" id="">
+                    <option>1999</option>
+                    <option>1998</option>
+                </select>
+        
+            </div> <br>
+            <label for="agree">I agree to the  terms and conditions </label>
+            <input type="checkbox" id="agree" required>
+        
+            <input type="submit" value="Register">
+        </form> 
+    </div>
+</body>
+</html>
