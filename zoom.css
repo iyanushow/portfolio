@@ -42,6 +42,37 @@ nav ul,nav{
     justify-content: space-between;
    
  }
+ nav h4{
+    display: inline-flex;
+    display: none;
+
+ }
+@media (max-width:900px)
+{
+    
+    nav h4
+    {
+        display: block;
+        z-index: 12;
+
+    }
+
+    nav ul,nav
+    {
+        display: none;
+    }
+    nav h4:hover
+    {
+        nav ul,nav
+            { display: block;
+                float: none;
+
+            }
+    }
+    
+
+
+}
  header{
      display: flex;
      flex-wrap: wrap;
@@ -109,6 +140,13 @@ nav ul,nav{
     color: white;
     display: inline-block;
   }
+  @media (max-width:900px)
+  { 
+    position: relative;
+    left: 30%;
+
+
+  }
  .myformtag
  {  color: whitesmoke;
      text-shadow: 0,2px,4px crimson;
@@ -116,6 +154,7 @@ nav ul,nav{
      position: relative;
      top: 10%;
  }
+
   main{
 
     height: 950px;
@@ -124,7 +163,15 @@ nav ul,nav{
     display: inline-flex;
     position: absolute;
     bottom: 50px;
+    left: 10%;
     margin: 0 25%;
+      
+
+}
+.contact-section a:hover{
+    color:crimson;
+     font-size: 20px;
+    
       
 
 }
@@ -136,26 +183,44 @@ nav ul,nav{
     border: 2px solid #252627;
 
 }
-.link {
 
-    text-align: center;
-    
-}
-.link a{
-
-    color: #e0c5c5;
-}
 footer{
     position: absolute;
     bottom: 20px;
-    left: 30%;
+    left: 40%;
     color: #707070;
     text-align: center; 
 }
-
-.rule
-{
+.fab{
+    font-size: 30px;
     position: relative;
-    top:9%;
+    left: 100px;
+}
+ .contact-line a:hover{
+    position: relative;
+    top: -4px;
+
+
+}
+.fa-instagram{
+    color:crimson;
+   
     
+}
+.fa-twitter{
+    color: #3a9bdb;
+    
+}
+.fa-linkedin{
+
+    color: rgb(15, 55, 129);
+    
+}
+
+.rule, .other-rule
+{
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+    width: 100%;
 }
