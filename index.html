@@ -3,67 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="zoom.css">    
- 
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="zoom.css">
+  <script src="https://kit.fontawesome.com/1000c4873b.js" crossorigin="anonymous"></script>
   <title>Iyanu's Portfolio</title>
 </head>
 <body>
-  <div class="navbar">
-    <header>
-      <div class="logo">
-        <h1><a href="./index.html">SHOW</a></h1>
+  
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-demo" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html" id="logo">
+          SHOW
+        </a>
       </div>
-      <nav>
-        <ul>
+      <div class="collapse navbar-collapse" id="bs-demo">
+        <ul class="nav navbar-nav navbar-right">
           <li><a href="./info.html">About me</a></li>
           <li><a href="./projects.html">Projects</a></li>
             <li><a href="#contact">Contact info</a></li>
             <li><a href="./register.html"> Register </a></li>
         </ul>
-      </nav>
-    </header>
-  </div>
-  <main>
-    <div class="homepage hero-image">
-      <div class="main-text">
-      
-        <h1 class="name-span hero-text">
-          <span class="intro">H</span><span class="intro">i </span>
-          <span class="intro">I'</span><span class="intro">m</span>
-          <div class="my-name">
-            <h3>IYANUOLUWA SOWANDE</h3>
-          </div>
-          <P >
-            <h4 class="work">
-              <div class="skill-text">
-                <span>(</span>
-                <span class="skill-set">CSS</span>
-                <span>/</span>
-                <span class="skill-set">JAVASCRIPT</span>
-                <span>/</span>
-                <span class="skill-set">PYTHON</span>
-                <span>)</span>
-              </div>
-            </h4> 
-          </P>
-        </h1>
-      
       </div>
-
-
+      
     </div>
+    
+  </nav>
+
+  <main>
+   
+    <div class="jumbotron">
+      <h3>
+        <span class="intro">H</span><span class="intro">i </span>
+        <span class="intro">I'</span><span class="intro">m</span>
+        <div class="my-name">
+          <h1>IYANUOLUWA SOWANDE</h1>
+        </div>
+      </h3>
+      <p class="skill-text">
+        <div class="skill-text">
+          <span>(</span>
+          <span class="skill-set">JAVASCRIPT</span>
+          <span>|</span>
+          <span class="skill-set">REACTNATIVE</span>
+          <span>|</span>
+          <span class="skill-set">PYTHON</span>
+          <span>)</span>
+        </div>
+      </p>
+      <p class="button"><a class="btn btn-primary btn-lg" href="projects.html" role="button">View Projects</a></p>
+    
+    </div>
+
+
+    
   </main>
   <div class="contact-section" id="contact">
-    <p class="contact-line">IG: <span class="link"><a href="https://www.instagram.com/the.iyanu/">@the.iyanu</a></span></p>
-    <p class="contact-line">Twitter: <span class="link"><a href="https://twitter.com/the_iyanu">@the_iyanu</a></span></p>
-    <p class="contact-line">Linkedin: <span class="link"><a href="https://linkedin.com/in/iyanuoluwa-sowande-0522">iyanuoluwa sowande</a></span></p>
+    <p class="contact-line"> <a href="https://www.instagram.com/the.iyanu/"><i class="fab fa-instagram"></i></a></p>
+    <p class="contact-line"><a href="https://twitter.com/the_iyanu"><i class="fab fa-twitter"></i></a></p>
+    <p class="contact-line"><a href="https://linkedin.com/in/iyanuoluwa-sowande-0522"><i class="fab fa-linkedin"></i></a></span></p>
 
 
   </div>
+  
   <hr class="rule">
   <footer>
     <p>copyright: iyanuoluwa.sowande 2020</p>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
 </body>
 </html>
