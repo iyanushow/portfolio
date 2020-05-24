@@ -96,10 +96,10 @@ body {
     color: rgb(15, 55, 129);
     
 }
-.contact-section{
+/* .contact-section{
     display: inline-flex;
-    position: absolute;
-    bottom: 50px;
+    position: relative;
+   top:20% ;
     left: 10%;
     margin: 0 25%;
 }
@@ -107,14 +107,46 @@ body {
 {
     padding: 2px;
     margin: 5px;
-}
+} */
 footer{
-    position: absolute;
-    bottom: 20px;
-    left: 40%;
+    background: #1f1818;
+    
     color: #707070;
     text-align: center; 
+    margin-top: 50px;
+    position: relative;
+    
+    width: 100%;
+    height: 7%;
+
 }
+footer p.copy
+{
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+}
+
+h2+.row
+{
+    margin: 15px auto;
+}
+.row p{
+    padding: 10px;
+}
+ .contact-section{
+    display: inline-flex;
+    position: relative;
+   top:20% ;
+    left: -10%;
+   
+}
+
+.contact-line
+{
+    padding: 2px;
+    margin: 5px;
+} 
 /* @media screen and (max-width: 1155px)
 {
     .jumbotron h3
@@ -156,25 +188,7 @@ footer{
    }
 
 } */
-.progress
-{
-    display: inline-block;
-    width: 100px;
-   
 
-}
-.pro
-{
-    padding: 1% 0;
-
-}
-.my-table 
-{
-    color: whitesmoke;
-  
-    width: 70%;
-    margin: auto 10%;
-}
 
 form
 {
@@ -197,6 +211,23 @@ form
 {
     color: whitesmoke;
 }
+.about-info{
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+#jam{
+    color: #707070;
+    text-align: justify;
+    padding: 5px;
+    margin: 10px;
+
+}
+section.container
+{
+    width: 90%;
+    margin: auto;
+
+}
 /* .container{
     
 }*/
@@ -213,7 +244,7 @@ nav ul,nav{
     justify-content: space-between;
    
  }
- */
+ 
  
 @media (max-width:900px)
 {
@@ -226,7 +257,7 @@ nav ul,nav{
 
 
 }
-/*
+
  header{
      display: flex;
      flex-wrap: wrap;
@@ -319,4 +350,4 @@ nav ul,nav{
     z-index: 1;
     width: 100%;
 }
-*/ */
+*/
