@@ -1,4 +1,4 @@
-    *{
+*{
     margin: 0;
     padding: 0;
     
@@ -9,28 +9,230 @@ html{
     scroll-behavior: smooth;
     height: 100%;
     margin: 0;
-}
+} 
  
 body { 
     background: #252627 url("banner.jpg")  center ;
     background-repeat: no-repeat;
-   
     margin: 0;
     background-size: cover;
     position: relative;
-    height: 1200px;
+    height: 1300px;
+    width: 100%;
   }
-.navbar{
-    padding: 0 100px 0 100px;
-    box-shadow: 0 5px 10px #29343f;
-    background-color: #181818;
+  main{
+
+    height: 800px;
+    margin-bottom: 6%;
+  }
+  .jumbotron
+ {  
+    
+    color: white;
+    display: inline-block;
+    background-color: transparent;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    text-shadow: 0 2px 5px crimson;
+}
+
+.jumbotron h1
+{
+    margin-top: 0;    
+
+}
+
+
+.skill-set:hover,.navbar-default .navbar-nav>li >a:hover,#logo:hover
+{
+    color:crimson ;
+    font-size: 24px;
+}
+.navbar
+{ 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    box-shadow: 0 5px 10px #29343f;
+    background-color: #181818;
+    border: none;
+   border-radius: 0%;
     box-sizing: border-box;
     z-index: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
+.row{
+    margin-top: 12%;
+}
+.navbar-toggle
+{
+    padding-right: 5px;
+    
+}
+.fab{
+    font-size: 30px;
+    position: relative;
+    left: 90px;
+}
+ .contact-line a:hover{
+    position: relative;
+    top: -4px;
+
+
+}
+.fa-instagram{
+    color:crimson;
+   
+    
+}
+.fa-twitter{
+    color: #3a9bdb;
+    
+}
+.fa-linkedin{
+
+    color: rgb(15, 55, 129);
+    
+}
+/* .contact-section{
+    display: inline-flex;
+    position: relative;
+   top:20% ;
+    left: 10%;
+    margin: 0 25%;
+}
+.contact-line
+{
+    padding: 2px;
+    margin: 5px;
+} */
+footer{
+    background: #1f1818;
+    
+    color: #707070;
+    text-align: center; 
+    margin-top: 50px;
+    position: relative;
+    
+    width: 100%;
+    height: 7%;
+
+}
+footer p.copy
+{
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+}
+
+h2+.row
+{
+    margin: 15px auto;
+}
+.row p{
+    padding: 10px;
+}
+ .contact-section{
+    display: inline-flex;
+    position: relative;
+   top:20% ;
+    left: -10%;
+   
+}
+
+.contact-line
+{
+    padding: 2px;
+    margin: 5px;
+} 
+/* @media screen and (max-width: 1155px)
+{
+    .jumbotron h3
+    {   position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);;
+      
+   }
+   .skill-text
+   {
+       display: none;
+   }
+   [role="button"]
+{   
+    position: relative;
+    left: 0;
+    top: 100px;
+
+}
+
+}
+@media screen and (max-width: 570px)
+{
+    .jumbotron
+    {  
+      text-align: center;
+   }
+
+}
+@media screen and (max-width: 380px)
+{
+    .jumbotron h3
+    {   position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);;
+      
+   }
+
+} */
+
+
+form
+{
+    margin: auto;
+    padding: 10px;
+    margin-right: 50px;
+
+    position: relative;
+    top: 10%;
+
+
+    z-index: 2000;
+}
+.form-control
+{
+    width: 70%;
+    
+}
+.form-group label
+{
+    color: whitesmoke;
+}
+.about-info{
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+#jam{
+    color: #707070;
+    text-align: justify;
+    padding: 5px;
+    margin: 10px;
+
+}
+section.container
+{
+    width: 90%;
+    margin: auto;
+
+}
+/* .container{
+    
+}*/
+ 
+/*
 .logo{
     font-size:16px;
 }
@@ -42,33 +244,15 @@ nav ul,nav{
     justify-content: space-between;
    
  }
- nav h4{
-    display: inline-flex;
-    display: none;
-
- }
+ 
+ 
 @media (max-width:900px)
 {
+ nav ul,nav
+    { display: block;
+        float: none;
+      }
     
-    nav h4
-    {
-        display: block;
-        z-index: 12;
-
-    }
-
-    nav ul,nav
-    {
-        display: none;
-    }
-    nav h4:hover
-    {
-        nav ul,nav
-            { display: block;
-                float: none;
-
-            }
-    }
     
 
 
@@ -101,12 +285,7 @@ nav ul,nav{
  }
  .skill-text
  { 
-      display: inline-flex;
-    height:5px;
-     font-size: 14px;
-     position: absolute;
-     left: 50px;
-     top: 2px;
+     
 
  }
  a{
@@ -119,26 +298,27 @@ nav ul,nav{
  
 .name-span
     {
-     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     
   
      
     }
 
 .my-name
 {
-    text-shadow: 0 2px 5px crimson;
+    
 }
 
  
   
   .hero-text {
-    text-align: left;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    color: white;
-    display: inline-block;
+   
+  }
+  @media (max-width:900px)
+  { 
+    position: relative;
+    left: 30%;
+
+
   }
   @media (max-width:900px)
   { 
@@ -155,19 +335,8 @@ nav ul,nav{
      top: 10%;
  }
 
-  main{
+  
 
-    height: 950px;
-  }
-.contact-section{
-    display: inline-flex;
-    position: absolute;
-    bottom: 50px;
-    left: 10%;
-    margin: 0 25%;
-      
-
-}
 .contact-section a:hover{
     color:crimson;
      font-size: 20px;
@@ -175,47 +344,10 @@ nav ul,nav{
       
 
 }
-.contact-line{
-    font-size: 1em;
-    color:#707070;
-    text-align: center;
-    margin: 5px;
-    border: 2px solid #252627;
-
-}
-
-footer{
-    position: absolute;
-    bottom: 20px;
-    left: 40%;
-    color: #707070;
-    text-align: center; 
-}
-.fab{
-    font-size: 30px;
-    position: relative;
-    left: 100px;
-}
- .contact-line a:hover{
-    position: relative;
-    top: -4px;
 
 
-}
-.fa-instagram{
-    color:crimson;
-   
-    
-}
-.fa-twitter{
-    color: #3a9bdb;
-    
-}
-.fa-linkedin{
 
-    color: rgb(15, 55, 129);
-    
-}
+
 
 .rule, .other-rule
 {
@@ -224,3 +356,4 @@ footer{
     z-index: 1;
     width: 100%;
 }
+*/
