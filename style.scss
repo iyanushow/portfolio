@@ -1,0 +1,30 @@
+$shadow-color: #dc143c;
+$nav-font-size: 24px;
+$font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+@import "./navigation";
+@import "./main";
+@import "./footer";
+
+body
+{
+    position: relative;
+    background: url("new/banner.jpg") no-repeat  ;
+    background-size: cover;
+}
+
+.jumbotron
+{  
+   
+   color: white;
+   
+   background-color: transparent;
+   font-family: $font;
+   
+   text-shadow: 0 2px 5px crimson;
+   
+}
+ .about-info
+{
+    color: whitesmoke; 
+    
+}  
