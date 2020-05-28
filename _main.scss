@@ -1,6 +1,8 @@
 main
 {
-    margin-top: 6.5rem;
+    margin-top: 4rem;
+    background: url("new/banner.jpg") no-repeat  ;
+    background-size: cover;
     
     height: 700px;
     // margin-bottom: 6%;
@@ -30,6 +32,17 @@ main
         
     }
     
+}
+
+@media screen and (max-width:767px)
+{
+
+    #img-r
+    {
+        height: 100%;
+        width: 100%;
+
+    }
 }
 
 
