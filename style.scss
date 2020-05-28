@@ -4,6 +4,7 @@ $font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 @import "./navigation";
 @import "./main";
 @import "./footer";
+@import "./project";
 
 *{
     margin: 0;
@@ -22,8 +23,8 @@ html{
 body
 {
     position: relative;
-    background: url("new/banner.jpg") no-repeat  ;
-    background-size: cover;
+    background-color: #1d1a1a;
+    
     overflow: hidden;
     
     
@@ -43,6 +44,11 @@ body
  .about-info
 {
     color: whitesmoke; 
+    height: 460px;
+    .row
+    {
+        height: 360px;
+    }
     
 }  
 #project-frame
@@ -63,8 +69,10 @@ body
             border: none;
             
         }
+    }
         
 }    
+
 
 
 

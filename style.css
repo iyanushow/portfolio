@@ -27,7 +27,9 @@
 }
 
 main {
-  margin-top: 6.5rem;
+  margin-top: 4rem;
+  background: url("new/banner.jpg") no-repeat;
+  background-size: cover;
   height: 700px;
 }
 
@@ -41,6 +43,13 @@ main .container .row img {
 
 main .skill-set:hover {
   color: #942239;
+}
+
+@media screen and (max-width: 767px) {
+  #img-r {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 footer {
@@ -79,6 +88,10 @@ footer #contact .fa-linkedin {
   color: #0f3781;
 }
 
+#project-main .container {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -92,8 +105,7 @@ html {
 
 body {
   position: relative;
-  background: url("new/banner.jpg") no-repeat;
-  background-size: cover;
+  background-color: #1d1a1a;
   overflow: hidden;
 }
 
@@ -106,6 +118,11 @@ body {
 
 .about-info {
   color: whitesmoke;
+  height: 460px;
+}
+
+.about-info .row {
+  height: 360px;
 }
 
 #project-frame {
@@ -123,9 +140,5 @@ body {
   margin: auto;
   overflow: hidden;
   border: none;
-}
-
-#project-frame .col-6 a {
-  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
