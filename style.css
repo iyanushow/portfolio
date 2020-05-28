@@ -16,19 +16,19 @@
   color: #942239;
 }
 
-#navigation .navbar-nav .nav-link {
+#navigation .navbar-nav .nav-link, #navigation .skill-set {
   color: #dc143c;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-#navigation .navbar-nav .nav-link:hover {
+#navigation .navbar-nav .nav-link:hover, #navigation .skill-set:hover {
   font-size: 24px;
   color: #942239;
 }
 
 main {
   margin-top: 6.5rem;
-  height: 800px;
+  height: 700px;
 }
 
 main .container .row {
@@ -39,24 +39,32 @@ main .container .row img {
   border-radius: 50%;
 }
 
+main .skill-set:hover {
+  color: #942239;
+}
+
 footer {
   background: #1f1818;
   color: #707070;
   text-align: center;
-  position: relative;
-  top: 10%;
   width: 100%;
-  height: 5%;
+  position: absolute;
+  bottom: 0;
 }
 
-footer #contact .contact-line {
+footer::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer #contact .contact-line, footer #contact .copy {
   display: inline-block;
+  text-align: left;
 }
 
 footer #contact .fab {
   font-size: 30px;
-  position: relative;
-  left: 90px;
 }
 
 footer #contact .fa-instagram {
@@ -71,10 +79,22 @@ footer #contact .fa-linkedin {
   color: #0f3781;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  overflow: auto;
+}
+
 body {
   position: relative;
   background: url("new/banner.jpg") no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .jumbotron {
@@ -86,5 +106,26 @@ body {
 
 .about-info {
   color: whitesmoke;
+}
+
+#project-frame {
+  height: 80%;
+}
+
+#project-frame .col-6 {
+  height: 100%;
+  overflow: visible;
+}
+
+#project-frame .col-6 iframe {
+  width: 100%;
+  height: 60%;
+  margin: auto;
+  overflow: hidden;
+  border: none;
+}
+
+#project-frame .col-6 a {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,14 +2,14 @@ main
 {
     margin-top: 6.5rem;
     
-    height: 800px;
+    height: 700px;
     // margin-bottom: 6%;
 
     .container .row
     {
 
 
-        // 570
+        
         height:500px;
 
 
@@ -19,9 +19,19 @@ main
         }
     }
         
+    .skill-set
+    {
+       
+        &:hover
+        {
+            
+            color:  #942239;
+        }
         
+    }
     
 }
+
 
 
    

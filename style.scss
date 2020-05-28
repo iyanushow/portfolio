@@ -5,11 +5,28 @@ $font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 @import "./main";
 @import "./footer";
 
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    overflow: auto;
+    
+} 
+
 body
 {
     position: relative;
     background: url("new/banner.jpg") no-repeat  ;
     background-size: cover;
+    overflow: hidden;
+    
+    
 }
 
 .jumbotron
@@ -28,3 +45,27 @@ body
     color: whitesmoke; 
     
 }  
+#project-frame
+{
+   height: 80%; 
+    .col-6
+    {   
+        height: 100%;
+        overflow: visible;
+       
+
+        iframe
+        {
+            width: 100%;
+            height: 60%;
+            margin: auto;
+            overflow: hidden;
+            border: none;
+            
+        }
+        
+}    
+
+
+
+
