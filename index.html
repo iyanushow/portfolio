@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../libraries/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/1000c4873b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
   <title>Iyanu's Portfolio</title>
 </head>
 <body>
@@ -25,9 +24,9 @@
       <div class="collapse navbar-collapse " id="bs-demo">
         <ul class="nav navbar-nav navbar-right ml-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
-          <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact info</a></li>
-            <li class="nav-item"><a class="nav-link" href="./register.html"> Register </a></li>
+          <li class="nav-item"><a class="nav-link" href="#project-main">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact info</a></li>
+          
         </ul>
       </div>
     </div>
@@ -51,15 +50,15 @@
             <p class="skill-text">
               <div class="skill-text">
                 <span>(</span>
-                <span class="skill-set">JAVASCRIPT</span>
+                <span class="skill-set">CSS</span>
                 <span>|</span>
-                <span class="skill-set">REACTNATIVE</span>
+                <span class="skill-set">JAVASCRIPT</span>
                 <span>|</span>
                 <span class="skill-set">PYTHON</span>
                 <span>)</span>
               </div>
             </p>
-            <p class="button"><a class="btn btn-primary btn-lg" href="projects.html" role="button">View Projects</a></p>
+            <p class="button"><a class="btn btn-primary btn-lg" href="#project-main" role="button">View Projects</a></p>
           
           </div>
 
@@ -76,7 +75,7 @@
     <h2 id="jam" class="mt-5">Let's talk about IYANU</h2>
     <div class="row d-flex align-items-start">
       <div class="col-lg-4">
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p> 
+        <p>Iyanuoluwa is an enthusiastic and solution oriented programmer. I am currently in my final year of undergraduate studies in computer engineering at Covenant University. I am a detailed and organized intermidiate level programmer proficient in HTML, CSS and its framework and JAVASCRIPT </p> 
       </div>
       <div class="col-lg-4">
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
@@ -91,11 +90,37 @@
       
     </div>
   </section class="mb-5">
+
+  <section id="project-main">
+    <div class="container mt-5">
+      <div class="row" id="project-frame">
+        <div class="col-6 d-flex align-items-center">
+          
+          <a href="https://iyanushow.github.io/Storm-regalHotel/"> <img src="./new/regalhotel.png" alt="" class="img-fluid"></a>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+          <a href="https://iyanushow.github.io/RGBcolorgame/"> <img src="./new/rgbcolor.png" alt="" class="img-fluid"></a>
+        </div>
+      </div>
+
+      <div class="row" id="project-frame-2">
+        <div class="col-6 d-flex align-items-center mt-5 mb-5">
+          
+          <a href="https://iyanushow.github.io/PATTERN/"> <img src="./new/patternwork.png" alt="" class="img-fluid"></a>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+          <a href="https://iyanushow.github.io/museofcandy/"> <img src="./new/museumifcandy.png" alt="" class="img-fluid"></a>
+        </div>
+      </div>
+    </div>
+    
+  </section>
   
   
   <footer>
     <div class="row">
       <div class="contact-section col-6 col-sm-6 d-flex justify-content-end" id="contact">
+        <p class="contact-line m-2"> <a href="https://github.com/iyanushow"><i class="fab fa-github"></i></a></p>
         <p class="contact-line m-2"> <a href="https://www.instagram.com/the.iyanu/"><i class="fab fa-instagram"></i></a></p>
         <p class="contact-line m-2"><a href="https://twitter.com/the_iyanu"><i class="fab fa-twitter"></i></a></p>
         <p class="contact-line m-2"><a href="https://linkedin.com/in/iyanuoluwa-sowande-0522"><i class="fab fa-linkedin"></i></a></span></p>
@@ -105,9 +130,11 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+    <script src="../libraries/jquery-3.5.1.min.js"></script>
+    <script src="../libraries/popper.js"></script>
+    <script src="../libraries/bootstrap.min.js"></script>
 </body>
 </html>

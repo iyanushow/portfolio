@@ -68,8 +68,6 @@ footer {
   color: #707070;
   text-align: center;
   width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 
 footer::before {
