@@ -1,0 +1,58 @@
+
+footer{
+
+//     background-color: #181920cf;
+    
+    color: #707070;
+    text-align: center;
+//     width: 100%;
+    font-size: 0.8rem;
+    font-weight: 200;
+    align-items: end;
+    justify-content: center;
+   
+    &::before
+    {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .icons
+    {
+        display: flex;
+        margin: auto;
+    }
+
+    .social
+    {
+        
+        justify-content: space-between;
+
+        a
+        {
+            margin: auto 10px;
+        }
+    }
+}
+// }
+// #contact  
+// {
+//     i
+//     {
+//         color: crimson;
+//     }
+//     a
+//     {
+//         &:hover
+//         {
+//             text-decoration: none;
+//         }
+//     }
+// }
+// @media (max-width:767px)
+// {
+//     h6
+//     {
+//         font-size: 0.8rem;
+//     }
+// }

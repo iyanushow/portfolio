@@ -1,0 +1,105 @@
+main
+{
+    margin-top: 4rem;
+    background: url("../new/banner.jpg") no-repeat  ;
+    background-size: cover;
+    
+    height: 700px;
+    // margin-bottom: 6%;
+
+    .container .row
+    {
+
+
+        
+        height:500px;
+
+
+        img
+        {
+            border-radius: 50%;
+        }
+    }
+        
+    .skill-set
+    {
+       
+        &:hover
+        {
+            
+            color:  #942239;
+        }
+        
+    }
+    .tiny-text
+    {
+        font-size: 1rem;
+        color: #5f5656;
+        font-weight: 200;
+        text-shadow: none;
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (min-width:767px) and (max-width:991px)
+{
+    
+    #about > div > div > div:nth-child(1) > div > p 
+    {
+       font-size: 0.8rem;
+    }
+}
+
+
+@media screen and (min-width:576px) and (max-width:767px)
+{
+
+    #img-r
+    {
+        // height: 60%;
+        // width: 60%;
+        position: relative;
+        bottom: 90px;
+        left: 20%;
+
+    }
+    div.skill-text,p.button
+    {
+        position: relative;
+        left: 20%;  
+    }
+    h3.mb-0
+    {
+        
+        .my-name,span
+        {
+            position: relative;
+            left: 20%;
+        }
+
+    } 
+}
+
+@media screen and (max-width:575px)
+{
+
+    #img-r
+    {
+        // height: 60%;
+        // width: 60%;
+        position: relative;
+        bottom: 20%;
+
+    }
+}
+@media screen and (max-width:295px)
+{
+    #about > div > div > div:nth-child(1) > div > p 
+    {
+       font-size: 0.8rem;
+    }
+}
+
+
+   

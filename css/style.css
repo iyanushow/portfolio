@@ -1,0 +1,289 @@
+#navigation {
+  background-color: #181818;
+}
+
+#navigation .navbar-brand {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #dc143c;
+  text-shadow: #dc143c;
+  font-size: 24px;
+}
+
+#navigation .navbar-brand:hover {
+  font-size: 24px;
+  color: #942239;
+}
+
+#navigation .navbar-nav .nav-link, #navigation .skill-set {
+  color: #dc143c;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#navigation .navbar-nav .nav-link:hover, #navigation .skill-set:hover {
+  font-size: 24px;
+  color: #942239;
+}
+
+main {
+  margin-top: 4rem;
+  background: url("../new/banner.jpg") no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+main .container .row {
+  height: 500px;
+}
+
+main .container .row img {
+  border-radius: 50%;
+}
+
+main .skill-set:hover {
+  color: #942239;
+}
+
+main .tiny-text {
+  font-size: 1rem;
+  color: #5f5656;
+  font-weight: 200;
+  text-shadow: none;
+  margin-bottom: 0;
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  #about > div > div > div:nth-child(1) > div > p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  #img-r {
+    position: relative;
+    bottom: 90px;
+    left: 20%;
+  }
+  div.skill-text, p.button {
+    position: relative;
+    left: 20%;
+  }
+  h3.mb-0 .my-name, h3.mb-0 span {
+    position: relative;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #img-r {
+    position: relative;
+    bottom: 20%;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  #about > div > div > div:nth-child(1) > div > p {
+    font-size: 0.8rem;
+  }
+}
+
+footer {
+  color: #707070;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 200;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+footer .social {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .social a {
+  margin: auto 10px;
+}
+
+#project-main .container {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  overflow: auto;
+}
+
+body {
+  position: relative;
+  background-color: #2F303A;
+  overflow: hidden;
+}
+
+.jumbotron {
+  color: white;
+  background-color: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 2px 5px crimson;
+}
+
+.about-info, .project-main {
+  color: whitesmoke;
+}
+
+.about-info h2, .project-main h2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 2px 5px crimson;
+}
+
+h3.project-info, h2.contact-info {
+  color: whitesmoke;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 2px 5px crimson;
+}
+
+.card {
+  border: none;
+  -webkit-box-shadow: 6px 6px 60px #00000033;
+          box-shadow: 6px 6px 60px #00000033;
+  background: #181920cf;
+  height: 450px;
+}
+
+.card:hover {
+  text-decoration: none;
+  position: relative;
+  bottom: 5px;
+}
+
+.card .card-text, .card .bar1 {
+  margin: auto 10px;
+}
+
+.project-main {
+  background-color: #181920cf;
+  height: 550px;
+}
+
+ul.card-text {
+  list-style-type: none;
+}
+
+#project-frame {
+  height: 80%;
+}
+
+#project-frame .col-6 {
+  height: 100%;
+  overflow: visible;
+}
+
+a[href="#project-carousel"] {
+  height: 35%;
+  position: absolute;
+  bottom: 8.5%;
+  top: auto;
+}
+
+@media (max-width: 980px) {
+  .project-main {
+    height: 300px;
+  }
+  a[href="#project-carousel"] {
+    height: 10%;
+    bottom: 15%;
+  }
+  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-prev {
+    left: 10%;
+  }
+  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next {
+    left: 80%;
+  }
+  .img-fluid {
+    max-height: 200px;
+    position: relative;
+    left: 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  a[href="#project-carousel"] {
+    height: 5%;
+    bottom: 13%;
+  }
+  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next {
+    left: 85%;
+  }
+}
+
+@media (max-width: 650px) {
+  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next {
+    right: 5%;
+  }
+  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-prev {
+    left: 5%;
+  }
+  .img-fluid {
+    left: 10%;
+  }
+}
+
+@media (max-width: 484px) {
+  a[href="#project-carousel"] {
+    height: 5%;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 390px) {
+  a[href="#project-carousel"] {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 350px) {
+  a[href="#project-carousel"] {
+    bottom: 12%;
+  }
+  .project-main {
+    height: 200px;
+  }
+}
+
+@media (max-width: 250px) {
+  a[href="#project-carousel"] {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .icons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=style.css.map */
