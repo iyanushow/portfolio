@@ -1,5 +1,8 @@
 #navigation {
-  background-color: #181818;
+  background-color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #navigation .navbar-brand {
@@ -17,17 +20,43 @@
 #navigation .navbar-nav .nav-link, #navigation .skill-set {
   color: #dc143c;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
 }
 
 #navigation .navbar-nav .nav-link:hover, #navigation .skill-set:hover {
-  font-size: 24px;
   color: #942239;
+}
+
+@media (min-width: 992px) {
+  #bs-demo {
+    position: absolute;
+    right: 60px !important;
+  }
+  #bs-demo li {
+    margin-left: 10px;
+  }
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 main {
   margin-top: 4rem;
-  background: url("../new/banner.jpg") no-repeat;
+  background: url("../new/light.jpg") no-repeat;
   background-size: cover;
+  position: relative;
+  bottom: 3px;
   height: 700px;
 }
 
@@ -49,6 +78,23 @@ main .tiny-text {
   font-weight: 200;
   text-shadow: none;
   margin-bottom: 0;
+}
+
+.btn-primary {
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid #dc143c;
+}
+
+.btn-primary:hover, .btn-primary :active {
+  background-color: #dc143c;
+  outline: none;
+  border: none;
+}
+
+.img-thumbnail {
+  background: transparent;
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
@@ -84,6 +130,10 @@ main .tiny-text {
   #about > div > div > div:nth-child(1) > div > p {
     font-size: 0.8rem;
   }
+}
+
+.card-text {
+  text-align: justify;
 }
 
 footer {
@@ -167,27 +217,46 @@ h3.project-info, h2.contact-info {
   text-shadow: 0 2px 5px crimson;
 }
 
-.card {
+.card, .info {
   border: none;
   -webkit-box-shadow: 6px 6px 60px #00000033;
           box-shadow: 6px 6px 60px #00000033;
-  background: #181920cf;
+  background: #151516cf;
   height: 450px;
+  text-align: justify;
 }
 
-.card:hover {
+.card:hover, .info:hover {
   text-decoration: none;
   position: relative;
   bottom: 5px;
 }
 
-.card .card-text, .card .bar1 {
+.card .card-text, .card .bar1, .info .card-text, .info .bar1 {
   margin: auto 10px;
 }
 
+.info {
+  position: relative;
+  top: 1.5rem !important;
+}
+
 .project-main {
-  background-color: #181920cf;
+  background-color: #151516cf;
   height: 550px;
+}
+
+.carousel-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.carousel-item.active {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 11;
+  grid-column: 2/13;
 }
 
 ul.card-text {
@@ -285,5 +354,25 @@ a[href="#project-carousel"] {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.infogrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  gap: 5px;
+}
+
+.infogrid .info {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+}
+
+.infogrid .me-cards {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-column: 7/12;
 }
 /*# sourceMappingURL=style.css.map */

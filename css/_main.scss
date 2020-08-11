@@ -1,12 +1,18 @@
+//base styles
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
 main
 {
     margin-top: 4rem;
-    background: url("../new/banner.jpg") no-repeat  ;
+    background: url("../new/light.jpg") no-repeat  ;
     background-size: cover;
+    position: relative;
+    bottom: 3px;
     
     height: 700px;
-    // margin-bottom: 6%;
-
     .container .row
     {
 
@@ -41,7 +47,22 @@ main
     }
     
 }
-
+.btn-primary{
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid #dc143c;
+    &:hover, :active{
+        background-color: #dc143c;
+        outline: none;
+        border: none;
+    }
+    
+}
+.img-thumbnail{
+    
+    background: transparent;
+}
 @media (min-width:767px) and (max-width:991px)
 {
     
@@ -100,6 +121,8 @@ main
        font-size: 0.8rem;
     }
 }
-
+.card-text{
+    text-align: justify;
+}
 
    
