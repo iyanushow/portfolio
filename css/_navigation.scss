@@ -1,8 +1,6 @@
-#navigation
-{
-   background-color: #181818;  
-    
-    // box-shadow: 0 5px 10px #29343f;
+#navigation{
+   background-color: black;  
+   justify-content: space-between;
     .navbar-brand
     {   
         font-family: $font;
@@ -22,14 +20,26 @@
         font-family: $font;
         &:hover
         {
-            font-size: $nav-font-size;
+            
             color:  #942239;
         }
-        
-    }
+        justify-content: space-between;
+        position: relative;
+    }    
 }
+@media (min-width:992px){
+    #bs-demo{
+        position: absolute;
+        right: 60px !important;
+        li{
+            margin-left: 10px;
+        }
+    }
 
-
-
+}
+.nav-link{
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
 
 
