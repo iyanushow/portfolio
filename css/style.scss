@@ -1,6 +1,7 @@
 $shadow-color: #dc143c;
 $nav-font-size: 24px;
 $font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$back-color:  #151516cf;
 @import "./navigation";
 @import "./main";
 @import "./footer";
@@ -9,64 +10,98 @@ $font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 *{
     margin: 0;
     padding: 0;
-    
-
+    text-decoration: none;
 }
-
 html{
     scroll-behavior: smooth;
     margin: 0;
     overflow: auto;
     
 } 
-
 body
 {
     position: relative;
-    background-color: #2F303A;
-    
-    overflow: hidden;
-    
-    
+    background-color: $back-color;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
 }
 
-.jumbotron
-{  
-   
-   color: white;
-   
-   background-color: transparent;
-   font-family: $font;
-   
-   text-shadow: 0 2px 5px crimson;
-   
-}
-.about-info,.project-main
+.about-info
 {
-    
     color: whitesmoke;
+    background-color: #151516cf;
+    // padding-bottom: 3rem;
+    box-sizing: border-box;
+    height: 550px;
+    // background: url("../new/compute.png") no-repeat ;
+    // background-size: contain;
+    // background-position: center  20%;
+   
     h2
     {
         text-align: center;
         font-family: $font;
         text-shadow: 0 2px 5px crimson;
+        // font-size: 150%;
     }
-
+    .infogrid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        height: 100%;
+        align-items: center;
+       
+        
+        .container{
+            background-color: #151516cf;
+            height: 100%;
+            font-size: 90%;
+            grid-column: 5/9;
+            p{
+                text-align: justify;
+                color: whitesmoke;
+                font-weight: 200;
+            }
+        }
+        
+    }
+    
 }
-h3.project-info,h2.contact-info
-{
-    color: whitesmoke;
-    text-align: center;
-    font-family: $font;
-    text-shadow: 0 2px 5px crimson;
+.skillsec{
+    
+    .container{
+        display: grid;
+        grid-template-columns: repeat(13,1fr);
+        .card:first-child{
+            grid-column: 2/5;
+        }
+        .card:nth-of-type(2){
+            grid-column: 6/9;
+        }
+        .card:nth-of-type(3){
+            grid-column: 10/13;
+            .progress-bar{
+                background-color: red;
+            }
+        }
+        
+    }
 }
-.card, .info
+.card 
 {
     border: none;
     box-shadow: 6px 6px 60px #00000033;
     background: #151516cf;
     height: 450px;
     text-align: justify;
+    color: whitesmoke;
+    font-weight: 200;
+    padding-left: 2%;
+    h2{
+        text-align: center;
+        font-family: $font;
+        text-shadow: 0 2px 5px crimson;
+    }
     &:hover
     {
       text-decoration: none;
@@ -79,165 +114,83 @@ h3.project-info,h2.contact-info
        
     
     }
-    
-}
-.info{
-    position: relative;
-    top: 1.5rem !important;
-}
-
-.project-main
-{
-    
-   background-color:  #151516cf;
-   height: 550px;
-}
-.carousel-inner{
-    display: grid;
-    grid-template-columns: repeat(12,1fr) ;
-}
-.carousel-item.active{
-    grid-column: 2/13;
-}
-ul.card-text
-{
-    list-style-type: none ;
-}
-#project-frame
-{
-   height: 80%; 
-    .col-6
-    {   
-        height: 100%;
-        overflow: visible;
-    }
-        
-}    
-a[href="#project-carousel"]
-{
-    height: 35%;
-    position: absolute;
-    bottom: 8.5%;
-    top: auto;
-}
-@media (max-width:980px)
-{
-    .project-main
-    {
-        height: 300px;
-    }
-    a[href="#project-carousel"]
-    {
-        height: 10%;
-        bottom: 15%;
-       
-    }
-    #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-prev
-    {
-        left: 10%;
-    }
-    #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next
-    {
-        left: 80%;
-    }
-    .img-fluid
-    {
-        max-height: 200px;
-        position: relative;
-        left: 20%;
-    }
-}
-
-@media (max-width:767px)
-{
-    a[href="#project-carousel"]
-    {
-        height: 5%;
-        bottom: 13%;
-       
-    } 
-    #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next
-    {
-        left: 85%;
-    }
-
-    
-}
-@media (max-width:650px)
-{
-    #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next
-    {
-        right: 5%;
-    }
-    #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-prev
-    {
-       left: 5%;
-    }
-    .img-fluid
-    {
-        
-        left: 10%;
-    }
-}
-@media (max-width:484px)
-{
-    a[href="#project-carousel"]
-    {
-        height: 5%;
-        
-       
-    } 
-}
-@media (min-width:351px) and (max-width:390px)
-{
-    a[href="#project-carousel"]
-    {
-        
-        bottom: 15%;
-       
-    }
-}
-
-
-@media (max-width:350px)
-{
-    a[href="#project-carousel"]
-    {
-        
-        bottom: 12%;
-       
-    } 
-    .project-main
-    {
-        height: 200px;
+    ul.card-text{
+        list-style-type: none ;
     }
     
 }
-@media (max-width:250px)
-{
-    a[href="#project-carousel"]
-    {
-        
-        display: none;
-       
-    }
-}
-@media (max-width:390px)
-{   .icons
-    {
-        flex-wrap: wrap;
-    }
+
+
+// media queries
+// @media screen and (max-width: 880px){
+//     .about-info{
+//         .infogrid{
+//             .container{
+//                 grid-column: 2/8;
+                
+//             }
+//         }
+//     }
+// }
+@media screen and (max-width: 767px){
+    .skillsec{
     
-}
-.infogrid{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap: 5px;
-    .info{
-        grid-column: 1/6;
+        .container{
+            gap: 20px;
+            .card:first-child{
+                grid-column: 3/11;
+            }
+            .card:nth-of-type(2){
+                grid-column: 3/11;
+                grid-row: 2;
+            }
+            .card:nth-of-type(3){
+                grid-column: 3/11;
+                grid-row: 3;
+            }
+            
+        }
     }
-    .me-cards{
-        grid-column: 7/12;
+    .about-info{
+        .infogrid{
+            // align-items: flex-start;
+            .container{
+                // margin-top: 5%;
+                grid-column: 4/9;
+                
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    .about-info{
+        .infogrid{
+            .container{
+                h2{
+                    padding-bottom: 2rem !important;
+                }
+                grid-column: 4/10;
+                    
+            }
+        }
     }
 }
 
+@media screen and (max-width: 430px){
+    .about-info{
+        height: auto;
+        .infogrid{  
+            .container{
+                grid-column: 2/12;
+                height: auto;
+                font-size: 90%;
+            }
+                
+        }
+        
+    }
+    h2{
+        font-size: 120%;
+    }
+    
+}

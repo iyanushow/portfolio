@@ -1,41 +1,36 @@
-//base styles
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
+
 main
-{
-    margin-top: 4rem;
+{   display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin-top: 3.9rem;
     background: url("../new/light.jpg") no-repeat  ;
     background-size: cover;
-    position: relative;
-    bottom: 3px;
-    
-    height: 700px;
-    .container .row
+    background-position: center 35% ;
+    padding-top: 10px;
+   
+    .container 
     {
-
-
-        
-        height:500px;
-
-
-        img
-        {
-            border-radius: 50%;
-        }
+        grid-column: 2/7;
+        height:550px;
+        padding-top: 8rem !important;
+        color: white;
+        background-color: transparent;
+        font-family: $font;
+        text-shadow: 0 2px 5px crimson;
     }
-        
+    img{
+        border-radius: 20%;
+        grid-column: 9/12;
+        align-self: center;
+        position: relative;
+        bottom: 5%;
+    }
     .skill-set
     {
-       
         &:hover
         {
-            
             color:  #942239;
         }
-        
     }
     .tiny-text
     {
@@ -45,12 +40,12 @@ main
         text-shadow: none;
         margin-bottom: 0;
     }
-    
 }
-.btn-primary{
+.btn-lg{
     border-radius: 20px;
     font-size: 1rem;
     background-color: transparent;
+    color: whitesmoke;
     border: 1px solid #dc143c;
     &:hover, :active{
         background-color: #dc143c;
@@ -62,67 +57,70 @@ main
 .img-thumbnail{
     
     background: transparent;
-}
-@media (min-width:767px) and (max-width:991px)
-{
-    
-    #about > div > div > div:nth-child(1) > div > p 
-    {
-       font-size: 0.8rem;
-    }
+    border: 1px solid #dee2e6;
 }
 
+// large screem styles
 
-@media screen and (min-width:576px) and (max-width:767px)
-{
 
-    #img-r
-    {
-        // height: 60%;
-        // width: 60%;
-        position: relative;
-        bottom: 90px;
-        left: 20%;
-
-    }
-    div.skill-text,p.button
-    {
-        position: relative;
-        left: 20%;  
-    }
-    h3.mb-0
-    {
-        
-        .my-name,span
-        {
-            position: relative;
-            left: 20%;
+//tablet styles
+@media screen and (max-width:1000px){
+    main{
+        background: url("../new/medium.jpg");
+        background-repeat: no-repeat;
+        background-position: center 35% ;
+        .tiny-text{
+            font-size: 1rem;
+            color: #5f5656;
+            font-weight: 200;
+            text-shadow: none;
+            margin-bottom: 0;
         }
-
-    } 
-}
-
-@media screen and (max-width:575px)
-{
-
-    #img-r
-    {
-        // height: 60%;
-        // width: 60%;
-        position: relative;
-        bottom: 20%;
-
     }
-}
-@media screen and (max-width:295px)
-{
-    #about > div > div > div:nth-child(1) > div > p 
-    {
-       font-size: 0.8rem;
-    }
-}
-.card-text{
-    text-align: justify;
+    
 }
 
-   
+//small screen styles
+@media screen and (max-width:680px){
+    main{
+        background: url("../new/small.jpg");
+        background-repeat: no-repeat;
+        background-position: center 60% ;
+        background-size: cover;
+        height: 60%px;
+        .container{
+            grid-column: 2/12;
+            height:100%;
+            padding-top: 3rem !important;
+            justify-content: center;
+            .my-name h1{
+                font-size: 100% ;
+            }  
+        }
+        img{
+            
+            display: none;
+        }
+    }  
+}
+
+@media screen and (max-width:522px){
+    main{
+        height: 50%;
+        .container{
+            grid-column: 2/12;
+            height:100%;
+            box-sizing: border-box;
+            padding-top: 10% !important;
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+            .skill-text, .spans, .firstbutton, .tiny-text, .my-name{
+               text-align: center;
+            } 
+            .tiny-text{
+                font-size: 70%;
+            }     
+        }
+    }  
+}

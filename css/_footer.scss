@@ -1,31 +1,50 @@
 
 footer{
-
-//     background-color: #181920cf;
-    
     color: #707070;
     text-align: center;
-//     width: 100%;
     font-size: 0.8rem;
-    font-weight: 200;
+    font-weight: 200 !important;
     align-items: end;
     justify-content: center;
-   
-    &::before
-    {
+    h2{
+        text-align: center;
+        font-family: $font;
+        text-shadow: 0 2px 5px crimson;
+        color: whitesmoke;
+        // font-size: 150%;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        
+        .phones{
+            grid-column: 2/span 4;
+            font-size: 100%;
+            h6{
+                font-weight: 200 !important;
+                font-size: 120%;
+            }
+        }
+        .mails{
+            grid-column:8/ span 4 ;
+            font-size: 100%;
+            h6{
+                font-weight: 200 !important;
+                font-size: 120% !important;
+            }
+        }
+    }
+    &::before{
         content: "";
         display: block;
         clear: both;
     }
-    .icons
-    {
+    .icons{
         display: flex;
         margin: auto;
     }
 
-    .social
-    {
-        
+    .social{
         justify-content: space-between;
 
         a
@@ -34,25 +53,34 @@ footer{
         }
     }
 }
-// }
-// #contact  
-// {
-//     i
-//     {
-//         color: crimson;
-//     }
-//     a
-//     {
-//         &:hover
-//         {
-//             text-decoration: none;
-//         }
-//     }
-// }
-// @media (max-width:767px)
-// {
-//     h6
-//     {
-//         font-size: 0.8rem;
-//     }
-// }
+
+
+//@media queries
+@media screen and (max-width: 520px){
+   footer .container .mails{
+        grid-column:7/ span 4 ;
+    }
+}
+@media screen and (max-width: 400px){
+    footer .container{
+        .mails{
+            grid-column:4/ span 5 ;
+       }
+        .phones{
+           grid-column: 4/span 5;
+           grid-row: 2;
+       }
+       .social{
+        justify-content: space-between;
+
+        a
+        {
+            margin: auto 2px;
+        }
+    }
+    } 
+    footer .fa-2x{
+        font-size: 120% !important;
+    }
+}
+ 

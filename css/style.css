@@ -30,6 +30,15 @@
   color: #942239;
 }
 
+#navigation > div {
+  margin-left: 8% !important;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
 @media (min-width: 992px) {
   #bs-demo {
     position: absolute;
@@ -40,32 +49,46 @@
   }
 }
 
-.nav-link {
-  text-transform: uppercase;
-  font-size: 0.8em;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+@media (max-width: 992px) {
+  #navigation > div {
+    max-width: 100% !important;
+  }
 }
 
 main {
-  margin-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  margin-top: 3.9rem;
   background: url("../new/light.jpg") no-repeat;
   background-size: cover;
+  background-position: center 35%;
+  padding-top: 10px;
+}
+
+main .container {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2/7;
+  height: 550px;
+  padding-top: 8rem !important;
+  color: white;
+  background-color: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 2px 5px crimson;
+}
+
+main img {
+  border-radius: 20%;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9/12;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: relative;
-  bottom: 3px;
-  height: 700px;
-}
-
-main .container .row {
-  height: 500px;
-}
-
-main .container .row img {
-  border-radius: 50%;
+  bottom: 5%;
 }
 
 main .skill-set:hover {
@@ -80,14 +103,15 @@ main .tiny-text {
   margin-bottom: 0;
 }
 
-.btn-primary {
+.btn-lg {
   border-radius: 20px;
   font-size: 1rem;
   background-color: transparent;
+  color: whitesmoke;
   border: 1px solid #dc143c;
 }
 
-.btn-primary:hover, .btn-primary :active {
+.btn-lg:hover, .btn-lg :active {
   background-color: #dc143c;
   outline: none;
   border: none;
@@ -95,58 +119,125 @@ main .tiny-text {
 
 .img-thumbnail {
   background: transparent;
+  border: 1px solid #dee2e6;
 }
 
-@media (min-width: 767px) and (max-width: 991px) {
-  #about > div > div > div:nth-child(1) > div > p {
-    font-size: 0.8rem;
+@media screen and (max-width: 1000px) {
+  main {
+    background: url("../new/medium.jpg");
+    background-repeat: no-repeat;
+    background-position: center 35%;
   }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  #img-r {
-    position: relative;
-    bottom: 90px;
-    left: 20%;
-  }
-  div.skill-text, p.button {
-    position: relative;
-    left: 20%;
-  }
-  h3.mb-0 .my-name, h3.mb-0 span {
-    position: relative;
-    left: 20%;
+  main .tiny-text {
+    font-size: 1rem;
+    color: #5f5656;
+    font-weight: 200;
+    text-shadow: none;
+    margin-bottom: 0;
   }
 }
 
-@media screen and (max-width: 575px) {
-  #img-r {
-    position: relative;
-    bottom: 20%;
+@media screen and (max-width: 680px) {
+  main {
+    background: url("../new/small.jpg");
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    background-size: cover;
+    height: 60%px;
+  }
+  main .container {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    height: 100%;
+    padding-top: 3rem !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .container .my-name h1 {
+    font-size: 100%;
+  }
+  main img {
+    display: none;
   }
 }
 
-@media screen and (max-width: 295px) {
-  #about > div > div > div:nth-child(1) > div > p {
-    font-size: 0.8rem;
+@media screen and (max-width: 522px) {
+  main {
+    height: 50%;
   }
-}
-
-.card-text {
-  text-align: justify;
+  main .container {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 10% !important;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .container .skill-text, main .container .spans, main .container .firstbutton, main .container .tiny-text, main .container .my-name {
+    text-align: center;
+  }
+  main .container .tiny-text {
+    font-size: 70%;
+  }
 }
 
 footer {
   color: #707070;
   text-align: center;
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 200 !important;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+footer h2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 2px 5px crimson;
+  color: whitesmoke;
+}
+
+footer .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+footer .container .phones {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/span 4;
+  font-size: 100%;
+}
+
+footer .container .phones h6 {
+  font-weight: 200 !important;
+  font-size: 120%;
+}
+
+footer .container .mails {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 4;
+  grid-column: 8/ span 4;
+  font-size: 100%;
+}
+
+footer .container .mails h6 {
+  font-weight: 200 !important;
+  font-size: 120% !important;
 }
 
 footer::before {
@@ -172,13 +263,114 @@ footer .social a {
   margin: auto 10px;
 }
 
+@media screen and (max-width: 520px) {
+  footer .container .mails {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 4;
+    grid-column: 7/ span 4;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer .container .mails {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 5;
+    grid-column: 4/ span 5;
+  }
+  footer .container .phones {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 5;
+    grid-column: 4/span 5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  footer .container .social {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .container .social a {
+    margin: auto 2px;
+  }
+  footer .fa-2x {
+    font-size: 120% !important;
+  }
+}
+
+#project-main {
+  background: #151516cf;
+  height: 30em;
+  padding-top: 1.5rem;
+}
+
+#project-main img {
+  display: block;
+}
+
+#project-main h2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 2px 5px crimson;
+  color: whitesmoke;
+}
+
 #project-main .container {
-  height: 100%;
+  padding-top: .5em;
+}
+
+#project-main .carousel-indicators {
+  bottom: -20%;
+}
+
+#project-main .carousel-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+#project-main .carousel-item.active {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+}
+
+#project-main .carousel-control-next {
+  right: -9%;
+}
+
+#project-main .carousel-control-prev {
+  left: -10%;
+}
+
+@media (max-width: 991px) {
+  #project-main {
+    height: 100%;
+  }
+  #project-main .project-info {
+    margin-bottom: 0.5rem !important;
+  }
+  #project-main .container {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  #project-main .carousel-indicators {
+    bottom: -30%;
+  }
+}
+
+@media (max-width: 380px) {
+  #project-main .carousel-indicators {
+    display: none;
+  }
 }
 
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html {
@@ -189,190 +381,167 @@ html {
 
 body {
   position: relative;
-  background-color: #2F303A;
+  background-color: #151516cf;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.jumbotron {
-  color: white;
-  background-color: transparent;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  text-shadow: 0 2px 5px crimson;
-}
-
-.about-info, .project-main {
+.about-info {
   color: whitesmoke;
+  background-color: #151516cf;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 550px;
 }
 
-.about-info h2, .project-main h2 {
+.about-info h2 {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-shadow: 0 2px 5px crimson;
 }
 
-h3.project-info, h2.contact-info {
-  color: whitesmoke;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  text-shadow: 0 2px 5px crimson;
+.about-info .infogrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.card, .info {
+.about-info .infogrid .container {
+  background-color: #151516cf;
+  height: 100%;
+  font-size: 90%;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5/9;
+}
+
+.about-info .infogrid .container p {
+  text-align: justify;
+  color: whitesmoke;
+  font-weight: 200;
+}
+
+.skillsec .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[13];
+      grid-template-columns: repeat(13, 1fr);
+}
+
+.skillsec .container .card:first-child {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+}
+
+.skillsec .container .card:nth-of-type(2) {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6/9;
+}
+
+.skillsec .container .card:nth-of-type(3) {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-column: 10/13;
+}
+
+.skillsec .container .card:nth-of-type(3) .progress-bar {
+  background-color: red;
+}
+
+.card {
   border: none;
   -webkit-box-shadow: 6px 6px 60px #00000033;
           box-shadow: 6px 6px 60px #00000033;
   background: #151516cf;
   height: 450px;
   text-align: justify;
+  color: whitesmoke;
+  font-weight: 200;
+  padding-left: 2%;
 }
 
-.card:hover, .info:hover {
+.card h2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 2px 5px crimson;
+}
+
+.card:hover {
   text-decoration: none;
   position: relative;
   bottom: 5px;
 }
 
-.card .card-text, .card .bar1, .info .card-text, .info .bar1 {
+.card .card-text, .card .bar1 {
   margin: auto 10px;
 }
 
-.info {
-  position: relative;
-  top: 1.5rem !important;
-}
-
-.project-main {
-  background-color: #151516cf;
-  height: 550px;
-}
-
-.carousel-inner {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-}
-
-.carousel-item.active {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 11;
-  grid-column: 2/13;
-}
-
-ul.card-text {
+.card ul.card-text {
   list-style-type: none;
 }
 
-#project-frame {
-  height: 80%;
-}
-
-#project-frame .col-6 {
-  height: 100%;
-  overflow: visible;
-}
-
-a[href="#project-carousel"] {
-  height: 35%;
-  position: absolute;
-  bottom: 8.5%;
-  top: auto;
-}
-
-@media (max-width: 980px) {
-  .project-main {
-    height: 300px;
+@media screen and (max-width: 767px) {
+  .skillsec .container {
+    gap: 20px;
   }
-  a[href="#project-carousel"] {
-    height: 10%;
-    bottom: 15%;
+  .skillsec .container .card:first-child {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3/11;
   }
-  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-prev {
-    left: 10%;
+  .skillsec .container .card:nth-of-type(2) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3/11;
+    -ms-grid-row: 2;
+    grid-row: 2;
   }
-  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next {
-    left: 80%;
+  .skillsec .container .card:nth-of-type(3) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3/11;
+    -ms-grid-row: 3;
+    grid-row: 3;
   }
-  .img-fluid {
-    max-height: 200px;
-    position: relative;
-    left: 20%;
+  .about-info .infogrid .container {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 5;
+    grid-column: 4/9;
   }
 }
 
-@media (max-width: 767px) {
-  a[href="#project-carousel"] {
-    height: 5%;
-    bottom: 13%;
+@media screen and (max-width: 576px) {
+  .about-info .infogrid .container {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 4/10;
   }
-  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next {
-    left: 85%;
-  }
-}
-
-@media (max-width: 650px) {
-  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-next {
-    right: 5%;
-  }
-  #project-main > div > div.row.my-3.ml-md-5.justify-content-center > div.m-5 > a.carousel-control-prev {
-    left: 5%;
-  }
-  .img-fluid {
-    left: 10%;
+  .about-info .infogrid .container h2 {
+    padding-bottom: 2rem !important;
   }
 }
 
-@media (max-width: 484px) {
-  a[href="#project-carousel"] {
-    height: 5%;
+@media screen and (max-width: 430px) {
+  .about-info {
+    height: auto;
   }
-}
-
-@media (min-width: 351px) and (max-width: 390px) {
-  a[href="#project-carousel"] {
-    bottom: 15%;
+  .about-info .infogrid .container {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    height: auto;
+    font-size: 90%;
   }
-}
-
-@media (max-width: 350px) {
-  a[href="#project-carousel"] {
-    bottom: 12%;
+  h2 {
+    font-size: 120%;
   }
-  .project-main {
-    height: 200px;
-  }
-}
-
-@media (max-width: 250px) {
-  a[href="#project-carousel"] {
-    display: none;
-  }
-}
-
-@media (max-width: 390px) {
-  .icons {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-.infogrid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  gap: 5px;
-}
-
-.infogrid .info {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-column: 1/6;
-}
-
-.infogrid .me-cards {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 5;
-  grid-column: 7/12;
 }
 /*# sourceMappingURL=style.css.map */

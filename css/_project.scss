@@ -1,5 +1,73 @@
-#project-main .container
-{
+$back-color:  #151516cf;
 
-    height: 100%;
+#project-main{
+    background: $back-color;
+    height: 30em;
+    padding-top: 1.5rem;
+    img{
+        display: block;
+    }
+    h2{
+        text-align: center;
+        font-family: $font;
+        text-shadow: 0 2px 5px crimson;
+        color: whitesmoke;
+        // font-size: 150%;
+    }
+    .container{
+        padding-top: .5em;
+    }
+    .carousel-indicators{
+        
+        bottom: -20%;
+        
+    }
+    .carousel-inner{
+        display: grid;
+        grid-template-columns: repeat(12,1fr) ;
+    
+    }
+    .carousel-item.active{
+        grid-column: 1/13;
+    }
+    .carousel-control-next{
+        // position: relative;
+        right:-9%;
+    }
+    .carousel-control-prev{
+        left: -10%;
+    }
+}
+
+//media queries
+@media (max-width: 991px){
+    #project-main{
+        height: 100%;
+        .project-info{
+            margin-bottom: 0.5rem !important;
+        }
+        .container{
+            padding-top: 0;
+        }
+    }
+}
+@media (max-width: 500px){
+    #project-main{
+        .carousel-indicators{
+        
+            bottom: -30%;
+            
+        }
+    }
+    
+}
+@media (max-width: 380px){
+    #project-main{
+        .carousel-indicators{
+        
+           display: none;
+            
+        }
+    }
+    
 }
