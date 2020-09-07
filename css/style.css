@@ -422,9 +422,10 @@ body {
 }
 
 .about-info .infogrid .container p {
-  text-align: justify;
+  text-align: center;
   color: whitesmoke;
-  font-weight: 200;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
 }
 
 .skillsec .container {
