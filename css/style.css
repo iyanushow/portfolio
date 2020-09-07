@@ -251,6 +251,12 @@ footer .icons {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 footer .social {
@@ -268,6 +274,9 @@ footer .social a {
     -ms-grid-column: 7;
     -ms-grid-column-span: 4;
     grid-column: 7/ span 4;
+  }
+  footer .fa-2x {
+    font-size: 120% !important;
   }
 }
 
@@ -292,8 +301,26 @@ footer .social a {
   footer .container .social a {
     margin: auto 2px;
   }
-  footer .fa-2x {
-    font-size: 120% !important;
+}
+
+@media screen and (max-width: 288px) {
+  footer .container.icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    padding: 0;
+  }
+  footer .container.icons .social {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/ span 2;
+  }
+  footer .container.icons p {
+    margin-left: 0 !important;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 4;
+    grid-column: 3/7;
   }
 }
 
@@ -410,22 +437,35 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1%;
 }
 
-.about-info .infogrid .container {
-  background-color: #151516cf;
+.about-info .infogrid .container.card {
+  background-color: #141414;
   height: 100%;
   font-size: 90%;
-  -ms-grid-column: 5;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 4;
-  grid-column: 5/9;
+  grid-column: 1/5;
 }
 
-.about-info .infogrid .container p {
+.about-info .infogrid .container.card:hover {
+  bottom: 0;
+}
+
+.about-info .infogrid .container.card p {
   text-align: center;
   color: whitesmoke;
   font-family: Helvetica, sans-serif;
   font-weight: 100;
+}
+
+.about-info .infogrid .container.image {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 8;
+  grid-column: 5/13;
+  height: 100%;
+  background-image: url("../new/imgg.jpg");
 }
 
 .skillsec .container {
@@ -455,6 +495,10 @@ body {
 
 .skillsec .container .card:nth-of-type(3) .progress-bar {
   background-color: red;
+}
+
+.skillsec .container .card:nth-of-type(3) .progress-bar.good {
+  background-color: #007bff;
 }
 
 .card {
@@ -495,54 +539,88 @@ body {
   }
   .skillsec .container .card:first-child {
     -ms-grid-column: 3;
-    -ms-grid-column-span: 8;
-    grid-column: 3/11;
+    -ms-grid-column-span: 9;
+    grid-column: 3/12;
   }
   .skillsec .container .card:nth-of-type(2) {
     -ms-grid-column: 3;
-    -ms-grid-column-span: 8;
-    grid-column: 3/11;
+    -ms-grid-column-span: 9;
+    grid-column: 3/12;
     -ms-grid-row: 2;
     grid-row: 2;
   }
   .skillsec .container .card:nth-of-type(3) {
     -ms-grid-column: 3;
-    -ms-grid-column-span: 8;
-    grid-column: 3/11;
+    -ms-grid-column-span: 9;
+    grid-column: 3/12;
     -ms-grid-row: 3;
     grid-row: 3;
   }
-  .about-info .infogrid .container {
-    -ms-grid-column: 4;
+  .about-info .infogrid .container.card {
+    -ms-grid-column: 1;
     -ms-grid-column-span: 5;
-    grid-column: 4/9;
+    grid-column: 1/6;
+  }
+  .about-info .infogrid .container.image {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 7;
+    grid-column: 6/13;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .about-info .infogrid .container {
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 6;
-    grid-column: 4/10;
+  .about-info .infogrid {
+    background-image: url("../new/imgg.jpg");
+    background-position: right;
   }
-  .about-info .infogrid .container h2 {
+  .about-info .infogrid .container.card {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 7;
+    grid-column: 4/11;
+  }
+  .about-info .infogrid .container.card h2 {
     padding-bottom: 2rem !important;
+  }
+  .about-info .infogrid .container.image {
+    height: 0;
+    display: none;
   }
 }
 
 @media screen and (max-width: 430px) {
   .about-info {
-    height: auto;
+    height: 450px;
   }
-  .about-info .infogrid .container {
+  .about-info .infogrid {
+    padding: 2%;
+    background-position: right;
+  }
+  .about-info .infogrid .container.card {
     -ms-grid-column: 2;
     -ms-grid-column-span: 10;
     grid-column: 2/12;
-    height: auto;
     font-size: 90%;
+  }
+  .about-info .infogrid .container.card h2 {
+    padding-bottom: 1.5rem !important;
   }
   h2 {
     font-size: 120%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .about-info {
+    height: auto;
+  }
+  .about-info .infogrid {
+    background-position: right;
+  }
+  .about-info .infogrid .container.card h2 {
+    padding-bottom: 0.7rem !important;
+  }
+  .about-info .infogrid .container.card p {
+    margin-top: 0.5rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

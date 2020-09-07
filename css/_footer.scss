@@ -42,6 +42,8 @@ footer{
     .icons{
         display: flex;
         margin: auto;
+        justify-content: center; 
+        align-items: flex-end;
     }
 
     .social{
@@ -60,6 +62,9 @@ footer{
    footer .container .mails{
         grid-column:7/ span 4 ;
     }
+    footer .fa-2x{
+        font-size: 120% !important;
+    }
 }
 @media screen and (max-width: 400px){
     footer .container{
@@ -71,16 +76,30 @@ footer{
            grid-row: 2;
        }
        .social{
-        justify-content: space-between;
-
-        a
-        {
-            margin: auto 2px;
+            justify-content: space-between;
+            a
+            {
+                margin: auto 2px;
+            }
         }
-    }
     } 
-    footer .fa-2x{
-        font-size: 120% !important;
+    
+}
+ 
+@media screen and (max-width: 288px){
+    footer .container.icons{
+        display: grid;
+        grid-template-columns:repeat(6,1fr) ;
+        padding: 0;
+        .social{
+            grid-column: 1/ span 2;
+        }
+       p{
+           margin-left: 0 !important;
+           grid-column: 3/7;
+       }
     }
+    
+    
 }
  
